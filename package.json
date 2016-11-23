@@ -7,7 +7,8 @@
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "start": "node devServer.js",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "knex": "knex"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-react-hmre": "^1.1.1",
     "cross-env": "^1.0.7",
+    "dotenv": "^2.0.0",
     "eslint": "^1.10.3",
     "eslint-plugin-babel": "^3.0.0",
     "eslint-plugin-react": "^3.11.3",
@@ -51,10 +53,11 @@
     "webpack-hot-middleware": "^2.9.1"
   },
   "dependencies": {
-    "css-loader": "^0.26.0",
     "d3": "^3.5.17",
+    "jsonwebtoken": "^7.1.9",
+    "knex": "^0.12.6",
+    "pg": "^6.1.0",
     "react": "^0.14.7",
-    "react-dom": "^0.14.7",
-    "style-loader": "^0.13.1"
+    "react-dom": "^0.14.7"
   }
 }
