@@ -3,13 +3,9 @@ import React, { Component } from 'react';
 import Styles from './css/family-member-input.css'
 
 class FamilyMemberInput extends Component {
-  changeRelation() {
-    console.log('changing relation');
-  }
 
   addFamilyMember(event) {
     event.preventDefault();
-    console.log('adding family member');
   }
 
   render() {
@@ -18,7 +14,7 @@ class FamilyMemberInput extends Component {
       <div id={Styles.familyinput}>
         <h3>add family member</h3>
         <form>
-          <select onChange={this.changeRelation}>
+          <select onChange={this.props.changeRelation}>
             <option defaultValue="" disabled>Choose relationship</option>
             <option value="great grandparent">great grandparent</option>
             <option value="grandparent">grandparent</option>
@@ -27,8 +23,10 @@ class FamilyMemberInput extends Component {
             <option value="child">child</option>
             <option value="grandchild">grandchild</option>
           </select>
-          <div>first name:  <input type="text"></input></div>
-          <button onClick={this.addFamilyMember}>Add to tree</button>
+          <div>first name:
+            <input type="text" onChange={this.props.changeFirstName}/>
+          </div>
+          <button onClick={this.props.addFamilyMember}>Add to tree</button>
         </form>
       </div>
     )
