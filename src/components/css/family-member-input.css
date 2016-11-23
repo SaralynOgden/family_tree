@@ -1,0 +1,16 @@
+#familyinput {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#familyinput > form {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}

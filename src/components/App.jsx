@@ -1,0 +1,20 @@
+import React, { Component } from 'react';
+
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        <hr style={{margin:0}}/>
+        <Main />
+        <Footer />
+      </div>
+    )
+  }
+}
+
+export default App;
