@@ -11,7 +11,15 @@ class Main extends Component {
     this.state = {
       relation: 'here',
       firstName: '',
-      familyStructure: [{firstName: 'me'}],
+      familyStructure: [{"relation": "grandparents",
+                         "children": [{"relation": "parents",
+                                       "children": [{"relation": "siblings",
+                                                     "children": [{"relation": "children",
+                                                                   "children": [{"relation":"grandchildren"}]
+                                                                  }]
+                                                    }]
+                                      }]
+                        }],
       tree: d3.layout.tree().size([500, 500])
     }
     this.changeRelation = this.changeRelation.bind(this);

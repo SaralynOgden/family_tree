@@ -9,10 +9,9 @@ import d3 from 'd3';
 
 class FamilyTree extends Component {
   makeNode(node, key) {
-    console.log(node);
     return <Node x={node.x}
                  y={node.y}
-                 firstName={node.firstName}
+                 relation={node.relation}
                  key={key}/>
   }
 

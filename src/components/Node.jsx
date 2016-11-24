@@ -10,7 +10,7 @@ class Node extends Component {
         <text textAnchor="middle"
               x={this.props.x}
               y={this.props.y}>
-          {this.props.firstName}
+          {this.props.relation}
         </text>
       </g>
     )
